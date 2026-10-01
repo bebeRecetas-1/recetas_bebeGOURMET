@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bebé Gourmet — +600 Recetas para tu Bebé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FEF6ED;
+  --cream: #FFF8F0;
+  --orange: #D4571A;
+  --orange-light: #F07040;
+  --green: #2A6B40;
+  --green-light: #3A8A55;
+  --gold: #E8A020;
+  --dark: #2C1208;
+  --mid: #7A4020;
+  --light: #C08060;
+  --border: #EACDAA;
+  --card: #FFFAF4;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--dark);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 auto;
+}
+img { max-width: 100%; border-radius: 10px; }
+
+/* STICKY BAR */
+.sticky-bar {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.sticky-bar span { color: var(--gold); }
+
+/* URGENCY TOP */
+.urgency-top {
+  background: var(--orange);
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* HERO */
+.hero {
+  background: var(--cream);
+  padding: 24px 20px 0;
+  text-align: center;
+}
+.hero-tag {
+  display: inline-block;
+  background: #FFF0E0;
+  border: 1px solid var(--border);
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  letter-spacing: 0.05em;
+}
+.hero h1 {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--orange);
+}
+.hero-sub {
+  font-size: 14px;
+  color: var(--mid);
+  margin-bottom: 18px;
+}
+.product-box {
+  background: linear-gradient(135deg, #FFF3E0, #FFE4C0);
+  border-radius: 20px;
+  padding: 24px;
+  margin: 0 0 16px;
+  border: 2px solid var(--border);
+  position: relative;
+}
+.product-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 8px;
+  border-radius: 0;
+}
+.product-name {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--orange);
+  letter-spacing: -0.02em;
+}
+.product-desc {
+  font-size: 13px;
+  color: var(--mid);
+  margin-top: 4px;
+}
+.stats-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.stat {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 6px;
+  text-align: center;
+}
+.stat-num { font-size: 18px; font-weight: 900; color: var(--orange); }
+.stat-label { font-size: 10px; color: var(--light); }
+
+.hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 20px;
+  border-radius: 0;
+}
+
+/* CTA BUTTON */
+.btn-main {
+  display: block;
+  background: var(--green);
+  color: #fff;
+  text-align: center;
+  padding: 16px 20px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 16px rgba(42,107,64,0.35);
+  margin: 8px 0;
+}
+.btn-main:active { transform: scale(0.98); }
+.btn-orange {
+  background: var(--orange);
+  box-shadow: 0 4px 16px rgba(212,87,26,0.35);
+}
+.trust-line {
+  font-size: 11px;
+  color: var(--light);
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+/* SECTIONS */
+section { padding: 28px 20px; }
+section.alt { background: #FFF8F0; }
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  text-align: center;
+  margin-bottom: 8px;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  color: var(--dark);
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+h2 em { font-style: normal; color: var(--orange); }
+.section-sub {
+  text-align: center;
+  color: var(--mid);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* PAIN POINTS */
+.pain-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--orange);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--dark);
+}
+.pain-card strong { color: var(--orange); }
+
+/* BENEFITS */
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.benefit-item:last-child { border-bottom: none; }
+.benefit-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.benefit-closing {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(26px, 8vw, 30px);
+  line-height: 1.2;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--orange);
+  margin-top: 26px;
+}
+
+/* MODULES */
+.module-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.module-age {
+  background: var(--orange);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.module-title { font-size: 14px; font-weight: 700; color: var(--dark); }
+.module-desc { font-size: 12px; color: var(--mid); margin-top: 3px; }
+.module-count {
+  display: inline-block;
+  background: #FFF0E0;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-top: 5px;
+}
+
+/* BONUSES */
+.bonus-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.bonus-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto 1 / 1;
+  border-radius: 0;
+  background: #FFF0E0;
+}
+.bonus-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+}
+.bonus-num {
+  background: var(--gold);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.bonus-gratis {
+  display: inline-block;
+  background: #E8F5EB;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 10px;
+  margin-left: 4px;
+}
+.bonus-title { font-size: 13px; font-weight: 700; color: var(--dark); }
+.bonus-desc { font-size: 12px; color: var(--mid); margin-top: 2px; }
+.bonus-price { font-size: 11px; color: var(--light); text-decoration: line-through; margin-top: 2px; }
+
+/* PRICING */
+.price-card {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+.price-card.featured {
+  border-color: var(--orange);
+  position: relative;
+}
+.price-img {
+  display: block;
+  width: calc(100% + 40px);
+  max-width: none;
+  height: auto;
+  aspect-ratio: auto 1 / 1;
+  margin: -20px -20px 14px;
+  border-radius: 14px 14px 0 0;
+  background: #FFF0E0;
+}
+.price-badge {
+  display: inline-block;
+  margin-bottom: 8px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.price-name {
+  font-size: clamp(26px, 8vw, 34px);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--dark);
+  text-wrap: balance;
+  margin-bottom: 8px;
+}
+.price-old { font-size: 13px; color: var(--light); text-decoration: line-through; }
+.price-val { font-size: 42px; font-weight: 900; color: var(--dark); line-height: 1; }
+.price-val sup { font-size: 20px; vertical-align: top; margin-top: 6px; }
+.price-usd { font-size: 13px; color: var(--mid); margin-bottom: 14px; }
+.price-includes { text-align: left; margin-bottom: 16px; }
+.price-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+.price-item:last-child { border-bottom: none; }
+.check { color: var(--green); font-size: 14px; flex-shrink: 0; }
+.dash { color: var(--light); font-size: 14px; flex-shrink: 0; }
+
+/* COUNTDOWN */
+.countdown-box {
+  background: var(--dark);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.countdown-label { font-size: 11px; color: #FFDDAA; font-weight: 600; margin-bottom: 8px; }
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.time-unit { text-align: center; }
+.time-num {
+  background: var(--orange);
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: block;
+  min-width: 56px;
+}
+.time-label { font-size: 10px; color: #FFDDAA; margin-top: 3px; }
+.time-sep { font-size: 28px; font-weight: 900; color: var(--orange); align-self: center; padding-bottom: 16px; }
+
+/* FULL-WIDTH IMAGE SECTIONS (garantía, ¿es para vos?) */
+.full-img { padding: 0; }
+.full-img img { display: block; width: 100%; height: auto; border-radius: 0; }
+
+/* FAQ */
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.faq-q {
+  padding: 13px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-q::after { content: '﹢'; font-size: 18px; color: var(--orange); flex-shrink: 0; }
+.faq-a {
+  display: none;
+  padding: 0 14px 13px;
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.5;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-q::after { content: '﹣'; }
+
+/* PARA TI / NO ES PARA TI */
+.for-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.for-card { border-radius: 12px; padding: 14px; }
+.for-yes { background: #E8F5EB; border: 1px solid #B0D8B8; }
+.for-no { background: #FDE8E8; border: 1px solid #F0B8B8; }
+.for-title { font-size: 13px; font-weight: 800; margin-bottom: 8px; }
+.for-yes .for-title { color: var(--green); }
+.for-no .for-title { color: #B02020; }
+.for-item { font-size: 11px; margin-bottom: 5px; display: flex; gap: 5px; }
+
+/* TRUST BADGES */
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.badge {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 11px;
+  color: var(--mid);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* STICKY CTA */
+.sticky-cta {
+  position: fixed;
+  bottom: env(safe-area-inset-bottom, 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 448px;
+  z-index: 90;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.25));
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: #888;
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+footer a { color: #aaa; }
+
+.footer-legal-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.footer-legal-links button {
+  color: #ddd;
+  text-decoration: underline;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: inherit;
+  padding: 4px 2px;
+}
+.footer-dot { color: #666; }
+
+.legal-consent {
+  text-align: center;
+  font-size: 10.5px;
+  color: var(--light);
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.legal-consent button {
+  color: var(--mid);
+  text-decoration: underline;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 10.5px;
+  font-family: inherit;
+  padding: 0;
+}
+
+/* LEGAL MODALS */
+.legal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(44, 18, 8, 0.6);
+  z-index: 300;
+  padding: 0;
+  align-items: flex-end;
+  justify-content: center;
+}
+.legal-overlay.show { display: flex; }
+.legal-box {
+  background: var(--bg);
+  border-radius: 18px 18px 0 0;
+  width: 100%;
+  max-width: 480px;
+  max-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 -8px 30px rgba(0,0,0,0.3);
+}
+.legal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  padding-top: max(16px, env(safe-area-inset-top, 0px));
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+  flex-shrink: 0;
+}
+.legal-head h3 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.3;
+}
+.legal-x {
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--mid);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.legal-content {
+  padding: 18px 20px;
+  padding-bottom: max(28px, env(safe-area-inset-bottom, 20px));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: 12.5px;
+  color: var(--mid);
+  line-height: 1.65;
+}
+.legal-content h4 {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--dark);
+  margin: 18px 0 6px;
+}
+.legal-content h4:first-of-type { margin-top: 0; }
+.legal-content p { margin-bottom: 9px; }
+.legal-content ul { margin: 4px 0 10px 16px; }
+.legal-content li { margin-bottom: 5px; }
+.legal-updated {
+  display: inline-block;
+  font-size: 10.5px;
+  color: var(--light);
+  background: #FFF0E0;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.legal-fill {
+  background: #FFEFC8;
+  color: var(--mid);
+  padding: 0 4px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2869938163388965');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2869938163388965&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar">
+  🔥 OFERTA ESPECIAL · Solo por tiempo limitado · <span>50% de descuento HOY</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">🍼 +600 RECETAS · DESDE 6 MESES HASTA 4 AÑOS</div>
+  <h1>Alimentá a tu bebé sin volver a preguntarte <em>qué darle de comer cada día</em></h1>
+  <p class="hero-sub">Recetas organizadas por edad, listas en menos de 30 minutos, con ingredientes de tu cocina.</p>
+
+  <div class="product-box">
+    <img src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/image-photoroom.png" alt="Bebé Gourmet" class="product-img">
+    <div class="product-name">BEBÉ GOURMET</div>
+    <div class="product-desc">+600 recetas saludables para bebés y niños · 6 meses a 4 años</div>
+  </div>
+
+  <img src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/chatgpt-image-29-sept-2026-01_20_11-photoroom.png" alt="Bebé Gourmet" class="hero-img">
+
+  <a href="#precios" class="btn-main">🛒 QUIERO BEBÉ GOURMET →</a>
+  <p class="trust-line">🔒 Pago seguro · Hotmart® · Acceso inmediato</p>
+</div>
+
+<!-- PAIN POINTS -->
+<section>
+  <div class="section-label">¿TE PASA ESTO?</div>
+  <h2>Muchas mamás pasan por esto<br><em>todos los días</em></h2>
+  <p class="section-sub">No estás sola 💛</p>
+
+  <div class="pain-card">📱 Terminás buscando en Google 40 minutos y dando siempre <strong>lo mismo de siempre</strong>.</div>
+  <div class="pain-card">😟 No sabés si tu bebé está recibiendo los <strong>nutrientes que necesita</strong> para crecer sano.</div>
+  <div class="pain-card">⏰ Entre la rutina y el cansancio, no tenés tiempo para pensar <strong>recetas adecuadas para su etapa</strong>.</div>
+  <div class="pain-card">😰 La hora de comer se convirtió en un momento de <strong>estrés y dudas</strong> en lugar de disfrute.</div>
+  <div class="pain-card">🤷 No sabés qué textura es segura para su edad ni <strong>por dónde empezar con los sólidos</strong>.</div>
+</section>
+
+<!-- WHAT CHANGES -->
+<section class="alt">
+  <div class="section-label">¿QUÉ VA A CAMBIAR?</div>
+  <h2>Esto es lo que pasa cuando<br><em>tenés el sistema correcto</em></h2>
+  <br>
+  <div class="benefit-item"><span class="benefit-icon">✅</span><span>Sabrás exactamente qué cocinarle mañana, pasado y toda la semana <strong>sin improvisar</strong>.</span></div>
+  <div class="benefit-item"><span class="benefit-icon">✅</span><span>Tu bebé comerá variado, nutritivo y seguro <strong>en cada etapa de su crecimiento</strong>.</span></div>
+  <div class="benefit-item"><span class="benefit-icon">✅</span><span>Ahorrarás tiempo con recetas fáciles, rápidas y con <strong>ingredientes que ya tenés en casa</strong>.</span></div>
+  <div class="benefit-item"><span class="benefit-icon">✅</span><span>Te sentirás más tranquila sabiendo que le ofrecés <strong>comidas seguras y balanceadas</strong>.</span></div>
+  <div class="benefit-item"><span class="benefit-icon">✅</span><span>La hora de comer volverá a ser un momento <strong>lindo para los dos</strong>, sin peleas ni estrés.</span></div>
+  <p class="benefit-closing">Disfruta cada etapa<br>con más confianza</p>
+</section>
+
+<!-- MODULES -->
+<section>
+  <div class="section-label">LO QUE INCLUYE</div>
+  <h2>+600 recetas organizadas<br><em>para cada etapa</em></h2>
+  <p class="section-sub">Cada módulo pensado para la edad exacta de tu bebé</p>
+
+  <div class="module-card">
+    <div>
+      <span class="module-age">6 – 9 meses</span>
+      <div class="module-title">Los primeros sabores del mundo</div>
+      <div class="module-desc">Purés suaves, papillas, primeras texturas y alimentos sin riesgo de atragantamiento.</div>
+      <span class="module-count">150 recetas</span>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <div>
+      <span class="module-age">9 – 12 meses</span>
+      <div class="module-title">Texturas, trozos y proteínas seguras</div>
+      <div class="module-desc">Empieza a masticar, descubre sabores nuevos y añade proteínas de forma progresiva. BLW friendly.</div>
+      <span class="module-count">150 recetas</span>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <div>
+      <span class="module-age">12 – 24 meses</span>
+      <div class="module-title">Come casi como un grande</div>
+      <div class="module-desc">Recetas de familia adaptadas, variedad de grupos alimentarios y menos selectividad.</div>
+      <span class="module-count">150 recetas</span>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <div>
+      <span class="module-age">2 – 4 años</span>
+      <div class="module-title">Hábitos y exploración de sabores</div>
+      <div class="module-desc">Platos completos, nuevas combinaciones y recetas que toda la familia disfruta.</div>
+      <span class="module-count">150 recetas</span>
+    </div>
+  </div>
+</section>
+
+<!-- BONUSES -->
+<section class="alt">
+  <div class="section-label">BONOS GRATIS CON TU COMPRA</div>
+  <h2>También vas a recibir<br><em>estos 6 bonos</em></h2>
+  <p class="section-sub">Incluidos sin costo adicional 🎁</p>
+
+  <div class="bonus-card">
+    <img class="bonus-img" src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/chatgpt-image-29-sept-2026-00_53_04.png" alt="Bono 1: Guía BLW Completa" loading="lazy" decoding="async">
+    <div class="bonus-body">
+      <div class="bonus-num">1</div>
+      <div>
+        <div class="bonus-title">Guía BLW Completa <span class="bonus-gratis">GRATIS</span></div>
+        <div class="bonus-desc">Baby Led Weaning desde cero: qué es, cómo empezar y cortes seguros por edad.</div>
+        <div class="bonus-price">Valor: $15 USD</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bonus-card">
+    <img class="bonus-img" src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/chatgpt-image-29-sept-2026-00_53_00.png" alt="Bono 2: 30 Dulces Sin Azúcar" loading="lazy" decoding="async">
+    <div class="bonus-body">
+      <div class="bonus-num">2</div>
+      <div>
+        <div class="bonus-title">30 Dulces Sin Azúcar <span class="bonus-gratis">GRATIS</span></div>
+        <div class="bonus-desc">Postres y meriendas saludables sin azúcar refinada para que el dulce sea una fiesta.</div>
+        <div class="bonus-price">Valor: $15 USD</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bonus-card">
+    <img class="bonus-img" src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/chatgpt-image-29-sept-2026-00_52_56.png" alt="Bono 3: Guía de Alimentos Alérgenos" loading="lazy" decoding="async">
+    <div class="bonus-body">
+      <div class="bonus-num">3</div>
+      <div>
+        <div class="bonus-title">Guía de Alimentos Alérgenos <span class="bonus-gratis">GRATIS</span></div>
+        <div class="bonus-desc">Cómo introducir alérgenos comunes con seguridad, qué observar en cada alimento nuevo.</div>
+        <div class="bonus-price">Valor: $12 USD</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bonus-card">
+    <img class="bonus-img" src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/chatgpt-image-29-sept-2026-00_52_52.png" alt="Bono 4: Planificador Semanal de Comidas" loading="lazy" decoding="async">
+    <div class="bonus-body">
+      <div class="bonus-num">4</div>
+      <div>
+        <div class="bonus-title">Planificador Semanal de Comidas <span class="bonus-gratis">GRATIS</span></div>
+        <div class="bonus-desc">4 semanas de menús organizados listos para seguir. Solo comprás y cocinás.</div>
+        <div class="bonus-price">Valor: $12 USD</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bonus-card">
+    <img class="bonus-img" src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/chatgpt-image-29-sept-2026-00_52_46.png" alt="Bono 5: Guía de Primeros Auxilios Alimentarios" loading="lazy" decoding="async">
+    <div class="bonus-body">
+      <div class="bonus-num">5</div>
+      <div>
+        <div class="bonus-title">Guía de Primeros Auxilios Alimentarios <span class="bonus-gratis">GRATIS</span></div>
+        <div class="bonus-desc">Qué hacer ante un atragantamiento o reacción. Para actuar con calma si lo necesitás.</div>
+        <div class="bonus-price">Valor: $10 USD</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bonus-card">
+    <img class="bonus-img" src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/chatgpt-image-29-sept-2026-01_41_58.png" alt="Bono 6: Lista de Mercado por Etapas" loading="lazy" decoding="async">
+    <div class="bonus-body">
+      <div class="bonus-num">6</div>
+      <div>
+        <div class="bonus-title">Lista de Mercado por Etapas <span class="bonus-gratis">GRATIS</span></div>
+        <div class="bonus-desc">Lo que necesitás comprar en cada fase. Solo llevala al super y listo.</div>
+        <div class="bonus-price">Valor: $8 USD</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#FFF3E0;border-radius:12px;padding:14px;text-align:center;margin-top:6px;">
+    <div style="font-size:12px;color:var(--mid);">Valor total de los bonos</div>
+    <div style="font-size:22px;font-weight:900;color:var(--light);text-decoration:line-through;">$72 USD</div>
+    <div style="font-size:18px;font-weight:900;color:var(--green);">HOY GRATIS 🎁</div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="precios">
+  <div class="section-label">ELIGE TU PLAN</div>
+  <h2>Elegí la opción que<br><em>más se adapta a vos</em></h2>
+  <br>
+
+  <!-- COUNTDOWN -->
+  <div class="countdown-box">
+    <div class="countdown-label">⏳ Esta oferta vence en:</div>
+    <div class="countdown-timer">
+      <div class="time-unit"><span class="time-num" id="ch">00</span><div class="time-label">HORAS</div></div>
+      <div class="time-sep">:</div>
+      <div class="time-unit"><span class="time-num" id="cm">15</span><div class="time-label">MIN</div></div>
+      <div class="time-sep">:</div>
+      <div class="time-unit"><span class="time-num" id="cs">00</span><div class="time-label">SEG</div></div>
+    </div>
+  </div>
+
+  <!-- PACK -->
+  <div class="price-card">
+    <img class="price-img" src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/gemini_generated_image_kevtuqkevtuqkevt.jpg" alt="Pack Bebé Gourmet" loading="lazy" decoding="async">
+    <div class="price-name">PACK BEBÉ GOURMET</div>
+    <div class="price-old">Antes: $25.90</div>
+    <div class="price-val"><sup>$</sup>12<sup style="font-size:18px">.90</sup></div>
+    <div class="price-usd">USD · Pago único · Acceso de por vida</div>
+    <div class="price-includes">
+      <div class="price-item"><span class="check">✓</span> +600 recetas organizadas por edad</div>
+      <div class="price-item"><span class="check">✓</span> Desde 6 – 9 meses | 150 recetas</div>
+      <div class="price-item"><span class="check">✓</span> Desde 9 – 12 meses | 150 recetas</div>
+      <div class="price-item"><span class="check">✓</span> Desde 12 – 24 meses | 150 recetas</div>
+      <div class="price-item"><span class="check">✓</span> Desde 2 – 4 años | 150 recetas</div>
+      <div class="price-item"><span class="check">✓</span> Actualizaciones incluidas</div>
+      <div class="price-item"><span class="check">✓</span> Garantía 7 días</div>
+    </div>
+    <a href="https://pay.hotmart.com/U107811924X?checkoutMode=10&bid=1790789339143" class="btn-main" style="font-size:14px;">QUIERO EL PACK — $12.90 →</a>
+    <p class="trust-line">🔒 Compra segura · Acceso inmediato</p>
+  </div>
+
+  <!-- MEGA PACK -->
+  <div class="price-card featured">
+    <img class="price-img" src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/gemini_generated_image_q2b6kgq2b6kgq2b6.jpg" alt="Mega Pack Bebé Gourmet" loading="lazy" decoding="async">
+    <div class="price-badge">⭐ MÁS COMPLETO</div>
+    <br>
+    <div class="price-name">MEGA PACK BEBÉ GOURMET</div>
+    <div class="price-old">Antes: $35.90</div>
+    <div class="price-val"><sup>$</sup>17<sup style="font-size:18px">.90</sup></div>
+    <div class="price-usd">USD · Pago único · Acceso de por vida</div>
+    <div class="price-includes">
+      <div class="price-item"><span class="check">✓</span> +600 recetas organizadas por edad</div>
+      <div class="price-item"><span class="check">✓</span> Desde 6 – 9 meses | 150 recetas</div>
+      <div class="price-item"><span class="check">✓</span> Desde 9 – 12 meses | 150 recetas</div>
+      <div class="price-item"><span class="check">✓</span> Desde 12 – 24 meses | 150 recetas</div>
+      <div class="price-item"><span class="check">✓</span> Desde 2 – 4 años | 150 recetas</div>
+      <div class="price-item"><span class="check">✓</span> Guía BLW Completa</div>
+      <div class="price-item"><span class="check">✓</span> 30 Dulces Sin Azúcar</div>
+      <div class="price-item"><span class="check">✓</span> Guía de Primeros Auxilios Alimentarios</div>
+      <div class="price-item"><span class="check">✓</span> Guía de Alimentos Alérgenos</div>
+      <div class="price-item"><span class="check">✓</span> Planificador Semanal de Comidas</div>
+      <div class="price-item"><span class="check">✓</span> Lista de Mercado por Etapas</div>
+      <div class="price-item"><span class="check">✓</span> Actualizaciones incluidas</div>
+      <div class="price-item"><span class="check">✓</span> Garantía 7 días</div>
+    </div>
+    <a href="https://pay.hotmart.com/T107817365Q?checkoutMode=10&bid=1790789757700" class="btn-main btn-orange" style="font-size:14px;">QUIERO EL MEGA PACK — $17.90 →</a>
+    <p class="trust-line">🔒 Pago seguro · Hotmart® · Acceso inmediato</p>
+    <div style="font-size:11px;color:var(--orange);font-weight:700;margin-top:6px;text-align:center;">⚠️ Esta oferta no va a durar. Ahorás $18 USD hoy.</div>
+  </div>
+
+  <div class="badges">
+    <div class="badge">🔒 Pago seguro</div>
+    <div class="badge">📧 Entrega por email</div>
+    <div class="badge">♾️ Acceso de por vida</div>
+  </div>
+</section>
+
+<!-- PARA TI / NO ES PARA TI -->
+<section class="full-img">
+  <img src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/chatgpt-image-29-sept-2026-02_26_06.png" alt="¿Es para vos? Bebé Gourmet es para vos si… y no es para vos si…" loading="lazy" decoding="async">
+</section>
+
+<!-- GUARANTEE -->
+<section class="full-img">
+  <img src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/06/captura-garantia.png" alt="Garantía de 7 días sin preguntas" loading="lazy" decoding="async">
+</section>
+
+<!-- FAQ -->
+<section class="alt">
+  <div class="section-label">PREGUNTAS FRECUENTES</div>
+  <h2>Resolvemos tus <em>dudas</em></h2>
+  <br>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">¿A partir de qué edad puedo usar las recetas?</div>
+    <div class="faq-a">Desde los 6 meses en adelante. Incluye recetas para cada etapa del crecimiento: desde papillas y purés para los primeros meses, recetas BLW cuando tu bebé esté listo, y comidas completas hasta los 4 años.</div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">¿Cómo recibo el recetario después de comprar?</div>
+    <div class="faq-a">Inmediatamente después de confirmar tu compra recibirás un email con el acceso para descargar el recetario y todos los bonos. Sin esperas, sin demoras.</div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">¿Los ingredientes son difíciles de conseguir?</div>
+    <div class="faq-a">Para nada. Todas las recetas usan ingredientes comunes que encontrás en cualquier supermercado. Nada exótico ni costoso, están pensadas para familias reales y presupuestos reales.</div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">¿Puedo verlo desde el celular?</div>
+    <div class="faq-a">Sí. El recetario es completamente digital en formato PDF. Podés consultarlo desde tu celular, tablet o computadora, las veces que quieras.</div>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">¿Es pago único o me cobran algo más?</div>
+    <div class="faq-a">Es un ÚNICO PAGO. Jamás te volveremos a cobrar nada, ni actualizaciones ni suscripción. Pagás una vez y es tuyo para siempre.</div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="text-align:center;">
+  <div class="section-label">¿LISTA PARA EMPEZAR?</div>
+  <h2>Dejá resuelto lo que tu bebé va a comer <em>mañana</em></h2>
+  <p class="section-sub" style="margin-top:8px;">Elegí tu plan y empezá hoy mismo</p>
+  <br>
+  <a href="#precios" class="btn-main">🛒 VER LOS PLANES →</a>
+  <a href="#precios" class="btn-main btn-orange" style="margin-top:8px;">⚡ QUIERO EL MEGA PACK — $17.90</a>
+  <p class="trust-line" style="margin-top:10px;">🔒 Pago seguro · Hotmart® · Acceso inmediato · Garantía 7 días</p>
+</section>
+
+<footer>
+  <div class="footer-legal-links">
+    <button type="button" onclick="openLegal('privacyModal')">Política de Privacidad</button>
+    <span class="footer-dot">·</span>
+    <button type="button" onclick="openLegal('termsModal')">Términos y Condiciones</button>
+  </div>
+  <p>© 2026 Bebé Gourmet · Todos los derechos reservados</p>
+  <p style="margin-top:12px;font-size:10px;color:#666;line-height:1.6;">
+    <strong style="color:#888;">AVISO LEGAL:</strong> Este sitio no es parte del sitio web de Facebook o Meta, Inc., ni está respaldado por Facebook de ninguna manera. FACEBOOK es una marca registrada de META, Inc.
+  </p>
+</footer>
+
+<!-- MODAL: POLÍTICA DE PRIVACIDAD -->
+<div class="legal-overlay" id="privacyModal" onclick="if(event.target===this) closeLegal('privacyModal')">
+  <div class="legal-box">
+    <div class="legal-head">
+      <h3>Política de Privacidad</h3>
+      <span class="legal-x" onclick="closeLegal('privacyModal')">✕</span>
+    </div>
+    <div class="legal-content">
+      <span class="legal-updated">Última actualización: 29 de septiembre de 2026</span>
+
+      <h4>1. Responsable del tratamiento de datos</h4>
+      <p><span class="legal-fill">[Nombre del negocio / responsable]</span> ("nosotros") es responsable del tratamiento de los datos personales que nos brindás a través de este sitio. Ante cualquier consulta, podés escribirnos a <span class="legal-fill">[email de contacto]</span>.</p>
+
+      <h4>2. Qué información recopilamos</h4>
+      <p>Cuando comprás o completás un formulario en este sitio podemos recopilar tu nombre, correo electrónico y los datos de facturación necesarios para procesar el pago. Los datos de tu tarjeta o medio de pago los procesa directamente Hotmart®, nuestra plataforma de venta y pagos, y no quedan almacenados en nuestros servidores.</p>
+      <p>También recopilamos automáticamente información técnica de navegación (dirección IP, tipo de dispositivo, navegador, páginas visitadas) mediante cookies y píxeles de seguimiento, incluido el Píxel de Meta/Facebook, que usamos para medir el rendimiento de nuestras campañas publicitarias.</p>
+
+      <h4>3. Para qué usamos tus datos</h4>
+      <ul>
+        <li>Procesar tu compra y entregarte el producto digital.</li>
+        <li>Enviarte por email el acceso al recetario y los bonos.</li>
+        <li>Responder consultas de atención al cliente.</li>
+        <li>Enviarte comunicaciones sobre tu compra y, solo si lo autorizaste, ofertas relacionadas.</li>
+        <li>Medir y optimizar nuestras campañas publicitarias en Meta y otras plataformas.</li>
+        <li>Cumplir obligaciones legales o contables.</li>
+      </ul>
+
+      <h4>4. Con quién compartimos tu información</h4>
+      <p>No vendemos ni alquilamos tus datos personales. Los compartimos únicamente con proveedores que nos ayudan a operar el negocio: Hotmart® (pago y entrega), proveedores de email marketing (envío de tu acceso) y Meta/Facebook (cookies y píxeles para publicidad). Estos proveedores solo acceden a lo necesario para prestar su servicio.</p>
+
+      <h4>5. Cookies</h4>
+      <p>Usamos cookies propias y de terceros para mejorar tu experiencia de navegación, recordar preferencias y medir el rendimiento de nuestras campañas. Podés configurar tu navegador para bloquearlas o eliminarlas, aunque esto podría afectar el funcionamiento del sitio.</p>
+
+      <h4>6. Tus derechos</h4>
+      <p>Podés pedirnos en cualquier momento acceder a tus datos, corregirlos, solicitar su eliminación u oponerte a su uso para marketing. Para ejercer estos derechos, escribinos a <span class="legal-fill">[email de contacto]</span>.</p>
+
+      <h4>7. Seguridad</h4>
+      <p>Aplicamos medidas razonables para proteger tu información contra accesos no autorizados, pérdida o alteración. Ningún sistema es 100% infalible, por lo que no podemos garantizar una seguridad absoluta.</p>
+
+      <h4>8. Menores de edad</h4>
+      <p>Este sitio y el producto están dirigidos a personas adultas (madres, padres o cuidadores). No recopilamos intencionalmente datos personales de menores de edad.</p>
+
+      <h4>9. Cambios en esta política</h4>
+      <p>Podemos actualizar esta Política de Privacidad en cualquier momento. Los cambios entran en vigencia desde su publicación en esta misma página.</p>
+
+      <h4>10. Contacto</h4>
+      <p>Ante cualquier duda sobre esta Política de Privacidad, escribinos a <span class="legal-fill">[email de contacto]</span>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: TÉRMINOS Y CONDICIONES -->
+<div class="legal-overlay" id="termsModal" onclick="if(event.target===this) closeLegal('termsModal')">
+  <div class="legal-box">
+    <div class="legal-head">
+      <h3>Términos y Condiciones</h3>
+      <span class="legal-x" onclick="closeLegal('termsModal')">✕</span>
+    </div>
+    <div class="legal-content">
+      <span class="legal-updated">Última actualización: 29 de septiembre de 2026</span>
+
+      <h4>1. Aceptación de los términos</h4>
+      <p>Al acceder a este sitio y/o comprar "Bebé Gourmet" aceptás estos Términos y Condiciones en su totalidad. Si no estás de acuerdo, te pedimos no continuar con la compra.</p>
+
+      <h4>2. Descripción del producto</h4>
+      <p>"Bebé Gourmet" es un producto digital (e-book en PDF) con recetas para bebés y niños organizadas por edad, junto con los bonos detallados en esta página. No es un producto físico: no hay envío postal de ningún tipo.</p>
+
+      <h4>3. Precio y forma de pago</h4>
+      <p>Los precios se muestran en dólares estadounidenses (USD) e incluyen un único pago, sin cobros recurrentes ni suscripciones ocultas. El pago se procesa de forma segura a través de Hotmart®, plataforma independiente responsable del cobro. Al pagar, también aceptás los términos de Hotmart® como procesador del pago.</p>
+
+      <h4>4. Entrega del producto</h4>
+      <p>Una vez confirmado el pago, vas a recibir automáticamente un email con el acceso y descarga del recetario y los bonos incluidos. Si no lo recibís en las próximas horas, revisá la carpeta de spam o escribinos a <span class="legal-fill">[email de contacto]</span>.</p>
+
+      <h4>5. Garantía y reembolsos</h4>
+      <p>Ofrecemos una garantía de 7 (siete) días corridos desde la fecha de compra. Dentro de ese plazo podés pedir el reembolso completo escribiendo a <span class="legal-fill">[email de contacto]</span>, sin necesidad de justificar el motivo. Pasado ese plazo no se realizan reembolsos, al tratarse de un producto digital de acceso inmediato.</p>
+
+      <h4>6. Licencia de uso</h4>
+      <p>La compra te otorga una licencia personal, no exclusiva e intransferible sobre el material adquirido. Queda prohibido reproducir, revender, distribuir o compartir el contenido, total o parcialmente, sin autorización previa y por escrito.</p>
+
+      <h4>7. Aviso sobre el contenido</h4>
+      <p>El contenido de "Bebé Gourmet" tiene fines informativos y educativos. No reemplaza la consulta con un pediatra ni con ningún profesional de la salud. Te recomendamos consultar al pediatra de tu bebé antes de introducir alimentos nuevos, especialmente si hay antecedentes de alergias u otras condiciones médicas.</p>
+
+      <h4>8. Propiedad intelectual</h4>
+      <p>Todos los contenidos de este sitio y del producto (textos, recetas, diseño, imágenes) son propiedad de <span class="legal-fill">[Nombre del negocio]</span> y están protegidos por las leyes de propiedad intelectual. Su uso no autorizado puede dar lugar a acciones legales.</p>
+
+      <h4>9. Relación con Meta/Facebook</h4>
+      <p>Este sitio no es parte del sitio web de Facebook o Meta, Inc., ni está respaldado por Facebook de ninguna manera. FACEBOOK es una marca registrada de META, Inc.</p>
+
+      <h4>10. Modificaciones</h4>
+      <p>Podemos modificar estos Términos y Condiciones en cualquier momento. Los cambios entran en vigencia desde su publicación en esta página, así que te recomendamos revisarlos cada tanto.</p>
+
+      <h4>11. Contacto</h4>
+      <p>Ante cualquier consulta sobre estos Términos y Condiciones, escribinos a <span class="legal-fill">[email de contacto]</span>.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function openLegal(id) {
+  document.getElementById(id).classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function closeLegal(id) {
+  document.getElementById(id).classList.remove('show');
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>
+// Countdown timer
+function startCountdown() {
+  const KEY = 'bebe_countdown_15m';
+  let end = 0;
+  try { end = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+  if (!end) {
+    end = Date.now() + 15 * 60 * 1000; // 15 minutos
+    try { localStorage.setItem(KEY, end); } catch (e) {}
+  }
+  
+  function update() {
+    let diff = Math.max(0, end - Date.now());
+    let h = Math.floor(diff / 3600000);
+    let m = Math.floor((diff % 3600000) / 60000);
+    let s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('ch').textContent = String(h).padStart(2,'0');
+    document.getElementById('cm').textContent = String(m).padStart(2,'0');
+    document.getElementById('cs').textContent = String(s).padStart(2,'0');
+    if (diff > 0) setTimeout(update, 1000);
+  }
+  update();
+}
+
+try { startCountdown(); } catch(e) {}
+</script>
+</body>
+</html>
